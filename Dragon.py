@@ -1,9 +1,11 @@
 import random
+import os
+
 
 # Define the game constants
 WIDTH = 10
 HEIGHT = 10
-DRAGON = "D"
+DRAGON =  "\u2654"
 TREASURE = "T"
 OBSTACLE = "X"
 EMPTY = " "
@@ -39,6 +41,7 @@ while True:
     move = input("Enter your move (w/a/s/d): ")
 
     # Update game state based on player input
+    os.system('cls')
     if move == "w" and dragon_y > 0:
         dragon_y -= 1
     elif move == "a" and dragon_x > 0:
